@@ -37,9 +37,12 @@ back several decades.
     linux-rtc             https://lore.kernel.org/linux-rtc/
     linux-security-module https://lore.kernel.org/linux-security-module/
     linux-sgx             https://lore.kernel.org/linux-sgx/
+    linux-trace-devel     https://lore.kernel.org/linux-trace-devel/
+    linux-trace-users     https://lore.kernel.org/linux-trace-users/
     linux-watchdog        https://lore.kernel.org/linux-watchdog/
     linux-wireless        https://lore.kernel.org/linux-wireless/
     linuxppc-dev          https://lore.kernel.org/linuxppc-dev/
+    netdev                https://lore.kernel.org/netdev/
     selinux               https://lore.kernel.org/selinux/
     selinux-refpolicy     https://lore.kernel.org/selinux-refpolicy/
     stable                https://lore.kernel.org/stable/
