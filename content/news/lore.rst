@@ -22,6 +22,7 @@ back several decades.
     linux-bluetooth       https://lore.kernel.org/linux-bluetooth/
     linux-btrfs           https://lore.kernel.org/linux-btrfs/
     linux-clk             https://lore.kernel.org/linux-clk/
+    linux-fsdevel         https://lore.kernel.org/linux-fsdevel/
     linux-hwmon           https://lore.kernel.org/linux-hwmon/
     linux-i3c             https://lore.kernel.org/linux-i3c/
     linux-iio             https://lore.kernel.org/linux-iio/
@@ -29,6 +30,7 @@ back several decades.
     linux-media           https://lore.kernel.org/linux-media/
     linux-mips            https://lore.kernel.org/linux-mips/
     linux-modules         https://lore.kernel.org/linux-modules/
+    linux-mtd             https://lore.kernel.org/linux-mtd/
     linux-nfs             https://lore.kernel.org/linux-nfs/
     linux-parisc          https://lore.kernel.org/linux-parisc/
     linux-pci             https://lore.kernel.org/linux-pci/
