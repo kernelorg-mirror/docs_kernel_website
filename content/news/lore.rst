@@ -14,6 +14,7 @@ back several decades.
     ===================== ==============================================
     LKML                  https://lore.kernel.org/lkml/
     backports             https://lore.kernel.org/backports/
+    bpf                   https://lore.kernel.org/bpf/
     cocci                 https://lore.kernel.org/cocci/
     kernelnewbies         https://lore.kernel.org/kernelnewbies/
     linux-amlogic         https://lore.kernel.org/linux-amlogic/
@@ -21,7 +22,10 @@ back several decades.
     linux-block           https://lore.kernel.org/linux-block/
     linux-bluetooth       https://lore.kernel.org/linux-bluetooth/
     linux-btrfs           https://lore.kernel.org/linux-btrfs/
+    linux-cifs            https://lore.kernel.org/linux-cifs/
     linux-clk             https://lore.kernel.org/linux-clk/
+    linux-crypto          https://lore.kernel.org/linux-crypto/
+    linux-ext4            https://lore.kernel.org/linux-ext4/
     linux-fsdevel         https://lore.kernel.org/linux-fsdevel/
     linux-hwmon           https://lore.kernel.org/linux-hwmon/
     linux-i3c             https://lore.kernel.org/linux-i3c/
@@ -45,6 +49,7 @@ back several decades.
     linux-wireless        https://lore.kernel.org/linux-wireless/
     linuxppc-dev          https://lore.kernel.org/linuxppc-dev/
     netdev                https://lore.kernel.org/netdev/
+    rcu                   https://lore.kernel.org/rcu/
     selinux               https://lore.kernel.org/selinux/
     selinux-refpolicy     https://lore.kernel.org/selinux-refpolicy/
     stable                https://lore.kernel.org/stable/
