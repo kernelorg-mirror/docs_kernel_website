@@ -33,6 +33,7 @@ back several decades.
     linux-integrity       https://lore.kernel.org/linux-integrity/
     linux-media           https://lore.kernel.org/linux-media/
     linux-mips            https://lore.kernel.org/linux-mips/
+    linux-mm              https://lore.kernel.org/linux-mm/
     linux-modules         https://lore.kernel.org/linux-modules/
     linux-mtd             https://lore.kernel.org/linux-mtd/
     linux-nfs             https://lore.kernel.org/linux-nfs/
