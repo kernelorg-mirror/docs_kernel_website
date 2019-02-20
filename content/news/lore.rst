@@ -50,6 +50,7 @@ back several decades.
     linux-wireless        https://lore.kernel.org/linux-wireless/
     linuxppc-dev          https://lore.kernel.org/linuxppc-dev/
     netdev                https://lore.kernel.org/netdev/
+    netfilter-devel       https://lore.kernel.org/netfilter-devel/
     rcu                   https://lore.kernel.org/rcu/
     selinux               https://lore.kernel.org/selinux/
     selinux-refpolicy     https://lore.kernel.org/selinux-refpolicy/
