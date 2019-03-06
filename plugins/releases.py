@@ -332,7 +332,8 @@ class KernelReleases():
 
     def generate_finger_banner(self):
         # Just a bit of legacy silliness
-        contents = ''
+        leftside = 'The latest stable version of the Linux kernel is:'
+        contents = '{0:<61} {1}\n'.format(leftside, self.latest_release[1])
         for chunks in self.current_releases:
             label = chunks[0]
             release = chunks[1]
