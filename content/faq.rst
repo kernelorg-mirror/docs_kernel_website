@@ -45,6 +45,16 @@ stable kernel releases. This is done to avoid breaking automated parsers
 monitoring kernel.org with an expectation that there will always be a
 kernel release marked as "stable."
 
+Linus has tagged a new release, but it's not listed on the front page!
+----------------------------------------------------------------------
+Linus Torvalds PGP-signs git repository tags for all new mainline kernel
+releases, however a separate set of PGP signatures needs to be generated
+by the stable release team in order to create downloadable tarballs. Due
+to timezone differences between Linus and the members of the stable
+team, there is usually a delay of several hours between when the new
+mainline release is tagged and when PGP-signed tarballs become
+available. The front page is updated once that process is completed.
+
 Is there an RSS feed for the latest kernel version?
 ---------------------------------------------------
 Yes, and you can find it at https://www.kernel.org/feeds/kdist.xml.
