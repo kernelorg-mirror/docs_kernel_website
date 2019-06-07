@@ -9,55 +9,7 @@ You may access the archives of many Linux development mailing lists on
 lore.kernel.org_. Most of them include a full archive of messages going
 back several decades.
 
-.. table:: Currently hosted lists
-
-    ===================== ==============================================
-    LKML                  https://lore.kernel.org/lkml/
-    backports             https://lore.kernel.org/backports/
-    bpf                   https://lore.kernel.org/bpf/
-    cocci                 https://lore.kernel.org/cocci/
-    kernelnewbies         https://lore.kernel.org/kernelnewbies/
-    linux-amlogic         https://lore.kernel.org/linux-amlogic/
-    linux-arm-kernel      https://lore.kernel.org/linux-arm-kernel/
-    linux-block           https://lore.kernel.org/linux-block/
-    linux-bluetooth       https://lore.kernel.org/linux-bluetooth/
-    linux-btrfs           https://lore.kernel.org/linux-btrfs/
-    linux-cifs            https://lore.kernel.org/linux-cifs/
-    linux-clk             https://lore.kernel.org/linux-clk/
-    linux-crypto          https://lore.kernel.org/linux-crypto/
-    linux-ext4            https://lore.kernel.org/linux-ext4/
-    linux-fsdevel         https://lore.kernel.org/linux-fsdevel/
-    linux-hwmon           https://lore.kernel.org/linux-hwmon/
-    linux-i3c             https://lore.kernel.org/linux-i3c/
-    linux-iio             https://lore.kernel.org/linux-iio/
-    linux-integrity       https://lore.kernel.org/linux-integrity/
-    linux-media           https://lore.kernel.org/linux-media/
-    linux-mips            https://lore.kernel.org/linux-mips/
-    linux-mm              https://lore.kernel.org/linux-mm/
-    linux-modules         https://lore.kernel.org/linux-modules/
-    linux-mtd             https://lore.kernel.org/linux-mtd/
-    linux-nfs             https://lore.kernel.org/linux-nfs/
-    linux-parisc          https://lore.kernel.org/linux-parisc/
-    linux-pci             https://lore.kernel.org/linux-pci/
-    linux-riscv           https://lore.kernel.org/linux-riscv/
-    linux-renesas-soc     https://lore.kernel.org/linux-renesas-soc/
-    linux-rtc             https://lore.kernel.org/linux-rtc/
-    linux-security-module https://lore.kernel.org/linux-security-module/
-    linux-sgx             https://lore.kernel.org/linux-sgx/
-    linux-trace-devel     https://lore.kernel.org/linux-trace-devel/
-    linux-trace-users     https://lore.kernel.org/linux-trace-users/
-    linux-watchdog        https://lore.kernel.org/linux-watchdog/
-    linux-wireless        https://lore.kernel.org/linux-wireless/
-    linuxppc-dev          https://lore.kernel.org/linuxppc-dev/
-    netdev                https://lore.kernel.org/netdev/
-    netfilter-devel       https://lore.kernel.org/netfilter-devel/
-    rcu                   https://lore.kernel.org/rcu/
-    selinux               https://lore.kernel.org/selinux/
-    selinux-refpolicy     https://lore.kernel.org/selinux-refpolicy/
-    stable                https://lore.kernel.org/stable/
-    util-linux            https://lore.kernel.org/util-linux/
-    wireguard             https://lore.kernel.org/wireguard/
-    ===================== ==============================================
+- `listing of currently hosted archives`_
 
 If you would like to suggest another kernel development mailing list to
 be included in this list, please follow the instructions on the
@@ -96,7 +48,8 @@ or in a git commit message, please use the "permalink" URL provided by
 public-inbox. It is available in the headers of each displayed message
 or thread discussion.
 
-.. _lore.kernel.org: https://lore.kernel.org/lkml/
+.. _lore.kernel.org: https://lore.kernel.org/lists.html
+.. _`listing of currently hosted archives`: https://lore.kernel.org/lists.html
 .. _`Adding list archives to lore.kernel.org`: https://korg.wiki.kernel.org/userdoc/lore
 .. _`Public Inbox`: https://public-inbox.org/design_notes.html
 .. _git.kernel.org: https://git.kernel.org/pub/scm/public-inbox/
