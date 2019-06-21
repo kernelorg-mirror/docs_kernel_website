@@ -39,17 +39,44 @@ Git clone URLs are provided at the bottom of each page. Note, that due
 mailing list volume, list archives are sharded into multiple
 repositories, each roughly 1GB in size. In addition to cloning from
 lore.kernel.org, you may also access these repositories on
-git.kernel.org_.
+erol.kernel.org_.
+
+Mirroring
+~~~~~~~~~
+You can continuously mirror the entire mailing list archive collection
+by using the grokmirror_ tool. The following repos.conf file should get
+you all you need::
+
+    [lore.kernel.org]
+    site = https://lore.kernel.org
+    manifest = https://lore.kernel.org/manifest.js.gz
+    toplevel = /path/to/your/local/folder
+    mymanifest = /path/to/your/local/folder/manifest.js.gz
+    pull_threads = 4
+
+Please note, that you will require at least 20+ GB of local storage. The
+mirroring process only replicates the git repositories themselves -- if
+you want to use public-inbox with them, you will need to run
+"``public-inbox-init``" and "``public-inbox-index``" to create the
+database files required for public-inbox operation.
 
 Linking to list discussions from commits
 ----------------------------------------
 If you need to reference a mailing list discussion inside code comments
 or in a git commit message, please use the "permalink" URL provided by
 public-inbox. It is available in the headers of each displayed message
-or thread discussion.
+or thread discussion. Alternatively, you can use a generic message-id
+redirector in the form:
+
+- https://lore.kernel.org/r/message@id
+
+That should display the message regardless in which mailing list archive
+it's stored.
+
 
 .. _lore.kernel.org: https://lore.kernel.org/lists.html
+.. _erol.kernel.org: https://erol.kernel.org/
 .. _`listing of currently hosted archives`: https://lore.kernel.org/lists.html
 .. _`Adding list archives to lore.kernel.org`: https://korg.wiki.kernel.org/userdoc/lore
 .. _`Public Inbox`: https://public-inbox.org/design_notes.html
-.. _git.kernel.org: https://git.kernel.org/pub/scm/public-inbox/
+.. _grokmirror: https://github.com/mricon/grokmirror
