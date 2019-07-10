@@ -41,7 +41,7 @@ Longterm
     Version  Maintainer           Released     Projected EOL
     ======== ==================== ============ ==================
     4.19     Greg Kroah-Hartman   2018-10-22   Dec, 2020
-    4.14     Greg Kroah-Hartman   2017-11-12   Jan, 2020
+    4.14     Greg Kroah-Hartman   2017-11-12   Jan, 2024
     4.9      Greg Kroah-Hartman   2016-12-11   Jan, 2023
     4.4      Greg Kroah-Hartman   2016-01-10   Feb, 2022
     3.16     Ben Hutchings        2014-08-03   Apr, 2020
