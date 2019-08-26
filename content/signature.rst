@@ -127,8 +127,8 @@ Please review the script before adopting it for your needs.
 
 Important fingerprints
 ----------------------
-Here are key fingerprints for Linus Torvalds and Greg Kroah-Hartman, who
-are most likely to be releasing kernels:
+Here are key fingerprints for Linus Torvalds, Greg Kroah-Hartman, Sasha
+Levin, and Ben Hutchings, who are most likely to be releasing kernels:
 
 .. table::
 
@@ -137,6 +137,8 @@ are most likely to be releasing kernels:
     ================== ======================================================
     Linus Torvalds     ``ABAF 11C6 5A29 70B1 30AB  E3C4 79BE 3E43 0041 1886``
     Greg Kroah-Hartman ``647F 2865 4894 E3BD 4571  99BE 38DB BDC8 6092 693E``
+    Sasha Levin        ``E27E 5D8A 3403 A2EF 6687  3BBC DEA6 6FF7 9777 2CDC``
+    Ben Hutchings      ``AC2B 29BD 34A6 AFDD B3F6  8F35 E7BF C8EC 9586 1109``
     ================== ======================================================
 
 Please verify the TLS certificate for this site in your browser before
