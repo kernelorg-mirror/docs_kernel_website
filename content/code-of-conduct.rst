@@ -5,9 +5,6 @@ Code of Conduct
 :category: About
 :date: 2020-01-02
 
-Code of Conduct
----------------
-
 The Linux kernel community operates a `Code of Conduct`_ based on the
 `Contributor Covenant Code of Conduct`_.
 
@@ -16,7 +13,7 @@ The Linux kernel community operates a `Code of Conduct`_ based on the
 
 
 Code of Conduct Committee
--------------------------
+=========================
 
 The Linux kernel Code of Conduct Committee is currently made up of the
 following people:
@@ -26,13 +23,27 @@ following people:
         - Shuah Khan <skhan@linuxfoundation.org>
         - Greg Kroah-Hartman <gregkh@linuxfoundation.org>
 
-And can be reached all at once at <conduct@kernel.org>
+and can be reached all at once at <conduct@kernel.org>
 
 
 Code of Conduct Committee Reports
----------------------------------
+=================================
 
-### `Linux Kernel Code of Conduct Committee: September 2018 to July 2019 report`_
+`Linux Kernel Code of Conduct Committee: August 2019 to November 2019 report`_
+------------------------------------------------------------------------------
+
+In the period of August 1, 2019 through November 31, 2019, the Committee
+received no reports.
+
+We would like to thank the Linux kernel community members who have supported
+the adoption of the Code of Conduct and who continue to uphold the professional
+standards of our community.  If you have questions about this report,
+please write to <conduct@kernel.org>.
+
+.. _`Linux Kernel Code of Conduct Committee: August 2019 to November 2019 report`: https://lore.kernel.org/lkml/20191218090054.GA5120@kroah.com/
+
+`Linux Kernel Code of Conduct Committee: September 2018 to July 2019 report`_
+-----------------------------------------------------------------------------
 
 In the period of September 15, 2018 through July 31, 2019, the Committee
 received the following reports:
