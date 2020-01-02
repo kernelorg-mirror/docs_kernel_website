@@ -11,36 +11,40 @@ The Linux kernel community operates a `Code of Conduct`_ based on the
 .. _`Code of Conduct`: https://www.kernel.org/doc/html/latest/process/code-of-conduct.html
 .. _`Contributor Covenant Code of Conduct`: https://www.contributor-covenant.org/version/1/4/code-of-conduct.html
 
-
 Code of Conduct Committee
 -------------------------
 
 The Linux kernel Code of Conduct Committee is currently made up of the
 following people:
 
-        - Kristen Accardi <kristen.c.accardi@intel.com>
-        - Mishi Choudhary <mishi@linux.com>
-        - Shuah Khan <skhan@linuxfoundation.org>
-        - Greg Kroah-Hartman <gregkh@linuxfoundation.org>
+  - Kristen Accardi <kristen.c.accardi@intel.com>
+  - Mishi Choudhary <mishi@linux.com>
+  - Shuah Khan <skhan@linuxfoundation.org>
+  - Greg Kroah-Hartman <gregkh@linuxfoundation.org>
 
-and can be reached all at once at <conduct@kernel.org>
+Committee members can be reached all at once by writing to
+<conduct@kernel.org>.
 
+Committee Reports
+-----------------
 
-`Linux Kernel Code of Conduct Committee: August 2019 to November 2019 report`_
-------------------------------------------------------------------------------
+We would like to thank the Linux kernel community members who have supported
+the adoption of the Code of Conduct and who continue to uphold the professional
+standards of our community. If you have any questions about these reports,
+please write to <conduct@kernel.org>.
+
+August to November 2019
+~~~~~~~~~~~~~~~~~~~~~~~
+
+Archival copy: https://lore.kernel.org/lkml/20191218090054.GA5120@kroah.com/
 
 In the period of August 1, 2019 through November 31, 2019, the Committee
 received no reports.
 
-We would like to thank the Linux kernel community members who have supported
-the adoption of the Code of Conduct and who continue to uphold the professional
-standards of our community.  If you have questions about this report,
-please write to <conduct@kernel.org>.
+September 2018 to July 2019
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. _`Linux Kernel Code of Conduct Committee: August 2019 to November 2019 report`: https://lore.kernel.org/lkml/20191218090054.GA5120@kroah.com/
-
-`Linux Kernel Code of Conduct Committee: September 2018 to July 2019 report`_
------------------------------------------------------------------------------
+Archival copy: https://lore.kernel.org/lkml/20190810120700.GA7360@kroah.com/
 
 In the period of September 15, 2018 through July 31, 2019, the Committee
 received the following reports:
@@ -51,10 +55,3 @@ received the following reports:
 The result of the investigations:
 
   - Education and coaching: 4
-
-We would like to thank the Linux kernel community members who have supported
-the adoption of the Code of Conduct and who continue to uphold the professional
-standards of our community.  If you have questions about this report,
-please write to <conduct@kernel.org>.
-
-.. _`Linux Kernel Code of Conduct Committee: September 2018 to July 2019 report`: https://lore.kernel.org/lkml/20190810120700.GA7360@kroah.com/
