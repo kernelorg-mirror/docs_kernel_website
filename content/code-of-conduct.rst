@@ -13,7 +13,7 @@ The Linux kernel community operates a `Code of Conduct`_ based on the
 
 
 Code of Conduct Committee
-=========================
+-------------------------
 
 The Linux kernel Code of Conduct Committee is currently made up of the
 following people:
@@ -25,9 +25,6 @@ following people:
 
 and can be reached all at once at <conduct@kernel.org>
 
-
-Code of Conduct Committee Reports
-=================================
 
 `Linux Kernel Code of Conduct Committee: August 2019 to November 2019 report`_
 ------------------------------------------------------------------------------
