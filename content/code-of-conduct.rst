@@ -33,6 +33,20 @@ the adoption of the Code of Conduct and who continue to uphold the professional
 standards of our community. If you have any questions about these reports,
 please write to <conduct@kernel.org>.
 
+December 2019
+~~~~~~~~~~~~~
+
+Archival copy: https://lore.kernel.org/lkml/20200103105614.GC1047442@kroah.com/
+
+In the period of December 1, 2019 through December 30, 2019 the Committee
+received the following report:
+
+  - Insulting behavior in email: 1
+
+The result of the investigation:
+
+  - Education and coaching: 1
+
 August to November 2019
 ~~~~~~~~~~~~~~~~~~~~~~~
 
