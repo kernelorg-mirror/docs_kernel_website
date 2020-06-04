@@ -136,7 +136,6 @@ hr {
 }
 
 #latest {
-    width: 16em;
     float: right;
     background: #FFD133;
     box-shadow: -0.1em -0.3em 0.5em #B39223 inset;
@@ -145,28 +144,30 @@ hr {
     margin: 1em 2.2em 4em 0;
 }
 #latest td {
-    text-align: center;
+    text-align: right;
     vertical-align: top;
 }
 #latest_label {
     font-size: 1.25em;
-    padding: 0.75em 0 .3em 0;
+    padding: 0.75em 1.25em .3em 0;
 }
 #latest_button {
-    padding: 0 0 0.75em 1.2em;
+    padding: 0 0 0.75em 0;
 }
 #latest_button > a {
     display: block;
 }
 #latest_button img {
     vertical-align: middle;
-    opacity:0.7;
-    filter:alpha(opacity=70);
+    padding-right: 1.25em;
+    opacity: 0.7;
+    filter: alpha(opacity=70);
 }
 #latest_link {
     font-size: 2.75em;
     font-weight: bold;
-    padding: .35em 0.6em 0 0;
+    padding: .35em 0.25em 0 0.5em;
+    min-width: 2em;
 }
 #latest_link > a {
     color: #4C3D00;
