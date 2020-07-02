@@ -45,7 +45,6 @@ Longterm
     4.14     Greg Kroah-Hartman & Sasha Levin 2017-11-12   Jan, 2024
     4.9      Greg Kroah-Hartman & Sasha Levin 2016-12-11   Jan, 2023
     4.4      Greg Kroah-Hartman & Sasha Levin 2016-01-10   Feb, 2022
-    3.16     Ben Hutchings                    2014-08-03   Jun, 2020
     ======== ================================ ============ ==================
 
 Distribution kernels
@@ -61,7 +60,7 @@ kernel.org, you are running a distribution kernel. To find out the
 version of your kernel, run `uname -r`::
 
     # uname -r
-    3.7.5-201.fc18.x86_64
+    5.6.19-300.fc32.x86_64
 
 If you see anything at all after the dash, you are running a distribution
 kernel. Please use the support channels offered by your distribution
