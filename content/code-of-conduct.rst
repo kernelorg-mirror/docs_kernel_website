@@ -33,6 +33,23 @@ the adoption of the Code of Conduct and who continue to uphold the professional
 standards of our community. If you have any questions about these reports,
 please write to <conduct@kernel.org>.
 
+October 2020
+~~~~~~~~~~~~
+
+Archival copy: https://lore.kernel.org/lkml/20201105083002.GA3429143@kroah.com/
+
+In the period of January 1, 2020 through October 31, 2020 the Committee
+received the following reports:
+
+  - Unacceptable behavior or comments in email: 1
+  - Unacceptable comments in github repo by non-community members: 1
+  - Unacceptable comments toward a company: 1
+
+The result of the investigation:
+  - Education and coaching: 1
+  - Locking of github repo for any comments: 1
+  - Clarification that the Code of Conduct covers conduct related to individual developers only: 1
+
 December 2019
 ~~~~~~~~~~~~~
 
