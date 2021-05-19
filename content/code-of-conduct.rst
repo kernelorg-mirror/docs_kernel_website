@@ -33,6 +33,22 @@ the adoption of the Code of Conduct and who continue to uphold the professional
 standards of our community. If you have any questions about these reports,
 please write to <conduct@kernel.org>.
 
+April 2021
+~~~~~~~~~~
+
+Archival copy: https://lore.kernel.org/r/448b06e4-41fc-26df-a862-c3ba2f70b6b3@linuxfoundation.org
+
+In the period of November 1, 2020 through April 30, 2021 the Code of
+Conduct Committee received the following reports:
+
+  - Unacceptable behavior or comments in email (3rd party): 4
+
+The result of the investigation:
+  - Education and coaching: 1
+  - Public response to call attention to the behavior and request correction with consequence of ban if behavior persists: 1
+  - Public response to attention to the behavior and request correction: 1
+  - Clarification on the Code of Conduct conduct related to maintainer rights and responsibility to reject code: 1
+
 October 2020
 ~~~~~~~~~~~~
 
