@@ -17,6 +17,29 @@ release of the Linux kernel.
 .. _`Free Software Foundation`: https://www.fsf.org/
 .. _COPYING: /pub/linux/kernel/COPYING
 
+I heard that Linux ships with non-free "blobs"
+----------------------------------------------
+Before many devices are able to communicate with the OS, they must first
+be initialized with the "firmware" provided by the device manufacturer.
+This firmware is not part of Linux and isn't "executed" by the kernel --
+it is merely uploaded to the device during the driver initialization
+stage.
+
+While some firmware images are built from free software, a large subset
+of it is only available for redistribution in binary-only form. To
+avoid any licensing confusion, all firmware blobs were moved from the
+main Linux tree into a separate repository called `linux-firmware`_.
+
+It is possible to use Linux without any non-free firmware binaries, but
+usually at the cost of rendering a lot of hardware inoperable.
+Furthermore, many devices that do not require a firmware blob during
+driver initialization will already have non-free firmware already
+installed on the device anyway, so if your goal is to run a 100%
+free-as-in-freedom setup, you will often need to go a lot further than
+just avoiding loadable binary-only firmware blobs.
+
+.. _`linux-firmware`: https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/
+
 What does "stable/EOL" and "longterm" mean?
 -------------------------------------------
 As kernels move from the "mainline" into the "stable" category, two
@@ -62,120 +85,56 @@ Yes, and you can find it at https://www.kernel.org/feeds/kdist.xml.
 We also publish a .json file with the latest release information, which
 you can pull from here: https://www.kernel.org/releases.json.
 
-Why are there files that are dated tomorrow?
---------------------------------------------
-All timestamps on kernel.org are in UTC (Coordinated Universal Time). If
-you live in the western hemisphere your local time lags behind UTC.
-Under Linux/Unix, type ``date -u`` to get the current time in UTC.
+Where can I find kernel 3.10.0-1160.45.1.foo?
+---------------------------------------------
+Kernel versions that have a dash in them are packaged by distributions
+and are often extensively modified. Please contact the relevant
+distribution to obtain the exact kernel source.
+
+See the Releases_ page for more info on distribution kernels.
+
+.. _Releases: |filename|releases.rst
+
+How do I report a problem with the kernel?
+------------------------------------------
+If you are running a kernel that came with your Linux distribution, then
+the right place to start is by reporting the problem through your
+distribution support channels. Here are a few popular choices:
+
+  - `Ubuntu <https://help.ubuntu.com/stable/ubuntu-help/report-ubuntu-bug.html.en>`_
+  - `Fedora Project <https://docs.fedoraproject.org/en-US/quick-docs/howto-file-a-bug/>`_
+  - `Arch Linux <https://bugs.archlinux.org/>`_
+  - `Linux Mint <https://projects.linuxmint.com/reporting-an-issue.html>`_
+  - `Debian GNU/Linux <https://www.debian.org/Bugs/Reporting>`_
+  - `Red Hat <https://bugzilla.redhat.com/>`_
+  - `OpenSUSE <https://bugzilla.opensuse.org/>`_
+  - `SUSE <https://bugzilla.suse.com/>`_
+
+If you are sure that the problem is with the upstream kernel, please
+refer to the following document that describes how to report bugs and
+regressions to the developers:
+
+  - `Reporting issues`_
+
+.. _`Reporting issues`: https://docs.kernel.org/admin-guide/reporting-issues.html
+
+How do I get involved with Linux Kernel development?
+----------------------------------------------------
+A good place to start is the `Kernel Newbies`_ website.
+
+.. _`Kernel Newbies`: http://kernelnewbies.org/
 
 Can I get an account on kernel.org?
 -----------------------------------
 Kernel.org accounts are usually reserved for subsystem maintainers or
 high-profile developers. It is absolutely not necessary to have an
 account on kernel.org to contribute to the development of the Linux
-kernel, unless you submit pull requests directly to Linus.
+kernel, unless you submit pull requests directly to Linus Torvalds.
 
 If you are listed in the MAINTAINERS file or have reasons to believe you
 should have an account on kernel.org because of the amount of your
-contributions, please refer to the `accounts wiki page`_ for the
+contributions, please refer to the `accounts page`_ for the
 procedure to follow.
 
-.. _`accounts wiki page`: https://korg.wiki.kernel.org/userdoc/accounts
+.. _`accounts page`: https://korg.docs.kernel.org/accounts.html
 
-I have cool project X, can you guys mirror it for me?
------------------------------------------------------
-Probably not. Kernel.org deals with the Linux kernel, various
-distributions of the kernel and larger repositories of packages. We do
-not mirror individual projects, software, etc as we feel there are
-better places providing mirrors for those kinds of repositories. If you
-feel that kernel.org should mirror your project, please contact
-ftpadmin@kernel.org with the following information:
-
-- name
-- project name
-- project website
-- detailed project description
-- reason for wanting us to mirror
-
-The Kernel.org admin team will then review your request and talk to you
-about it. As with any kind of account on kernel.org it's up to the
-discretion of the admin team.
-
-How does kernel.org provide its users access to the git trees?
---------------------------------------------------------------
-We are using an access control system called gitolite_, originally
-written and maintained by Sitaram Chamarty. We chose gitolite for a
-number of reasons:
-
-- Limiting of ssh access to the system
-- Fine grained control over repository access
-- Well maintained and supported code base
-- Responsive development
-- Broad and diverse install base
-
-As well at the time of deployment the code had undergone an external
-code review.
-
-.. _gitolite: https://github.com/sitaramc/gitolite/wiki
-
-How do I create an -rc kernel? I get "Reversed patch detected!"
----------------------------------------------------------------
--rc kernel patches are generated from the base stable release.
-
-For example: to create the 2.6.14-rc5 kernel, you must:
-
-- download 2.6.13 (not 2.6.13.4)
-- and then apply the 2.6.14-rc5 patch.
-
-Yes, you want 2.6.13, not 2.6.14. Remember, that's an -rc kernel, as in, 2.6.14 doesn't exist yet. :)
-
-Where can I find kernel 2.4.20-3.16?
-------------------------------------
-Kernel version numbers of this form are distribution kernels, meaning
-they are modified kernels produced by distributions. Please contact the
-relevant distributor; or check out https://mirrors.kernel.org/.
-
-See the Releases_ page for more info on distribution kernels.
-
-.. _Releases: |filename|releases.rst
-
-I need help building/patching/fixing Linux kernel/modules/drivers!
-------------------------------------------------------------------
-Please see the `Kernel Newbies`_ website.
-
-There is also a wealth of knowledge on many topics involving Linux at
-The Linux Documentation Project (http://www.tldp.org)
-
-For finding or reporting bugs, look through the archives for the various
-Linux mailing lists, and if no specific list seems appropriate, try the
-browsing the Linux Kernel Mailing List.
-
-.. _`Kernel Newbies`: http://kernelnewbies.org/
-
-What happened to ftp.kernel.org?
---------------------------------
-FTP service was terminated on March 1, 2017. All content that used to be
-available via ftp.kernel.org can be accessed by browsing
-https://www.kernel.org/pub/. If you would like to use a command-line
-tool for accessing these files, you can do so with lftp:
-
-    lftp https://www.kernel.org/pub
-
-When will the next kernel be released?
---------------------------------------
-The next kernel will be released when it is ready. There is no strict
-timeline for making releases, but if you really need an educated guess,
-visit the Linux kernel `PHB Crystal Ball`_ -- it tries to provide a
-ballpark guess based on previous kernel release schedule.
-
-.. _`PHB Crystal Ball`: http://phb-crystal-ball.org/
-
-What will go into the next release?
------------------------------------
-It is hard to predict with certainty, but you can either take a peek at
-`linux-next`_ or read the `Linux Weather Forecast`_, where Jonathan
-Corbet provides a broad forecast of what will likely be included into
-the next mainline release.
-
-.. _`linux-next`: https://git.kernel.org/pub/scm/linux/kernel/git/next/linux-next.git/
-.. _`Linux Weather Forecast`: https://www.linux.com/news/2017/7/linux-weather-forecast
