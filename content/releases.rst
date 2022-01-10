@@ -16,8 +16,8 @@ Prepatch
 Mainline
     Mainline tree is maintained by Linus Torvalds. It's the tree where
     all new features are introduced and where all the exciting new
-    development happens. New mainline kernels are released every 2-3
-    months.
+    development happens. New mainline kernels are released every 9-10
+    weeks.
 
 Stable
     After each mainline kernel is released, it is considered "stable."
@@ -67,3 +67,48 @@ version of your kernel, run `uname -r`::
 If you see anything at all after the dash, you are running a distribution
 kernel. Please use the support channels offered by your distribution
 vendor to obtain kernel support.
+
+Releases FAQ
+------------
+Here are some questions we routinely receive about kernel release
+versions. See also the main "FAQ" section for some other topics.
+
+When is the next mainline kernel version going to be released?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Linux kernel follows a simple release cadence:
+
+  - after each mainline release, there is a 2-week "merge window" period
+    during which new major features are introduced into the kernel
+  - after the merge window closes, there is a is a 7-week bugfix and
+    stabilization period with weekly "release candidate" snapshots,
+    usually made available on Sundays
+  - rc7 is usually the last "release candidate" snapshot, though
+    occasionally there may be additional rc8+ releases if deemed
+    necessary
+
+So, to find the approximate date of the next mainline kernel release,
+find the date of the previous mainline release and add 9-10 weeks.
+
+What is the next LTS version going to be?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+LTS kernels are picked based on various factors -- major new
+features, popular commercial distribution needs, device manufacturer
+demand, maintainer workload and availability, etc. You roughly estimate
+when the new LTS version will become available based on how much time
+has elapsed since the last LTS version was picked.
+
+Why are some LTS versions supported longer than others?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+The "projected EOL" dates are not set in stone. Each new LTS kernel
+usually starts with only a 2-year projected EOL that can be extended
+further if there is enough interest from the industry at large to help
+support it for a longer period of time.
+
+Does the major version number (4.x vs 5.x) mean anything?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+No. The major version number is incremented when the number after the
+dot starts looking "too big." There is literally no other reason.
+
+Does the odd-even number still mean anything?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Not since 2.5 days.
