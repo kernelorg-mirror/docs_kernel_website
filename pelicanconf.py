@@ -63,12 +63,12 @@ PLUGINS = [releases]
 
 # Blogroll
 LINKS =  (
-    ('Cgit', 'https://git.kernel.org/'),
-    ('Documentation', 'https://www.kernel.org/doc/html/latest/'),
+    ('Git Trees', 'https://git.kernel.org/'),
+    ('Documentation', 'https://docs.kernel.org/'),
+    ('Kernel Mailing Lists', 'https://lore.kernel.org/'),
+    ('Patchwork', 'https://patchwork.kernel.org/'),
     ('Wikis', 'https://www.wiki.kernel.org/'),
     ('Bugzilla', 'https://bugzilla.kernel.org/'),
-    ('Patchwork', 'https://patchwork.kernel.org/'),
-    ('Kernel Mailing Lists', 'http://vger.kernel.org/'),
     ('Mirrors', 'https://mirrors.kernel.org/'),
     ('Linux.com', 'https://www.linux.com/'),
     ('Linux Foundation', 'http://www.linuxfoundation.org/'),
