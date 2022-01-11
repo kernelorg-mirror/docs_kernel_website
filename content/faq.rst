@@ -42,7 +42,7 @@ just avoiding loadable binary-only firmware blobs.
 
 .. _`linux-firmware`: https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/
 
-Can I use the word "Linux" or the tux logo?
+Can I use the word "Linux" or the Tux logo?
 -------------------------------------------
 Linux is a registered trademark of Linus Torvalds and its use is
 governed by the Linux Trademark Institute. Please consult the following
@@ -50,7 +50,7 @@ page for further information:
 
 - `Trademark Usage`_
 
-The tux penguin logo was created by Larry Ewing using Gimp software. It
+The Tux penguin logo was created by Larry Ewing using Gimp software. It
 is free to use, including commercially, as long as you give Larry Ewing
 proper credit ("if someone asks"). For any other permissions, please
 reach out to Mr. Larry Ewing directly.
