@@ -29,16 +29,16 @@ stage.
 
 While some firmware images are built from free software, a large subset
 of it is only available for redistribution in binary-only form. To
-avoid any licensing confusion, all firmware blobs were moved from the
-main Linux tree into a separate repository called `linux-firmware`_.
+avoid any licensing confusion, firmware blobs were moved from the main
+Linux tree into a separate repository called `linux-firmware`_.
 
 It is possible to use Linux without any non-free firmware binaries, but
 usually at the cost of rendering a lot of hardware inoperable.
 Furthermore, many devices that do not require a firmware blob during
-driver initialization will already have non-free firmware already
-installed on the device anyway, so if your goal is to run a 100%
-free-as-in-freedom setup, you will often need to go a lot further than
-just avoiding loadable binary-only firmware blobs.
+driver initialization simply already come with non-free firmware
+preinstalled on them. If your goal is to run a 100% free-as-in-freedom
+setup, you will often need to go a lot further than just avoiding
+loadable binary-only firmware blobs.
 
 .. _`linux-firmware`: https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/
 
