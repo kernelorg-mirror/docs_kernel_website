@@ -77,29 +77,27 @@ When is the next mainline kernel version going to be released?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Linux kernel follows a simple release cadence:
 
-  - after each mainline release, there is a 2-week "merge window" period
-    during which new major features are introduced into the kernel
-  - after the merge window closes, there is a is a 7-week bugfix and
-    stabilization period with weekly "release candidate" snapshots,
-    usually made available on Sundays
-  - rc7 is usually the last "release candidate" snapshot, though
-    occasionally there may be additional rc8+ releases if deemed
-    necessary
+- after each mainline release, there is a 2-week "merge window" period
+  during which new major features are introduced into the kernel
+- after the merge window closes, there is a is a 7-week bugfix and
+  stabilization period with weekly "release candidate" snapshots
+- rc7 is usually the last release candidate, though occasionally there
+  may be additional rc8+ releases if that is deemed necessary
 
 So, to find the approximate date of the next mainline kernel release,
-find the date of the previous mainline release and add 9-10 weeks.
+take the date of the previous mainline release and add 9-10 weeks.
 
-What is the next LTS version going to be?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-LTS kernels are picked based on various factors -- major new
+What is the next longterm release going to be?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Longterm kernels are picked based on various factors -- major new
 features, popular commercial distribution needs, device manufacturer
-demand, maintainer workload and availability, etc. You roughly estimate
-when the new LTS version will become available based on how much time
-has elapsed since the last LTS version was picked.
+demand, maintainer workload and availability, etc. You can roughly
+estimate when the new longterm version will become available based on
+how much time has elapsed since the last longterm version was chosen.
 
-Why are some LTS versions supported longer than others?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-The "projected EOL" dates are not set in stone. Each new LTS kernel
+Why are some longterm versions supported longer than others?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+The "projected EOL" dates are not set in stone. Each new longterm kernel
 usually starts with only a 2-year projected EOL that can be extended
 further if there is enough interest from the industry at large to help
 support it for a longer period of time.
@@ -111,4 +109,7 @@ dot starts looking "too big." There is literally no other reason.
 
 Does the odd-even number still mean anything?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Not since 2.5 days.
+A long time ago Linux used a system where odd numbers after the first
+dot indicated pre-release, development kernels (e.g. 2.1, 2.3, 2.5).
+This scheme was abandoned after the release of kernel 2.6 and these days
+pre-release kernels are indicated with "-rc".

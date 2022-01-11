@@ -101,20 +101,20 @@ If you are running a kernel that came with your Linux distribution, then
 the right place to start is by reporting the problem through your
 distribution support channels. Here are a few popular choices:
 
-  - `Ubuntu <https://help.ubuntu.com/stable/ubuntu-help/report-ubuntu-bug.html.en>`_
-  - `Fedora Project <https://docs.fedoraproject.org/en-US/quick-docs/howto-file-a-bug/>`_
-  - `Arch Linux <https://bugs.archlinux.org/>`_
-  - `Linux Mint <https://projects.linuxmint.com/reporting-an-issue.html>`_
-  - `Debian GNU/Linux <https://www.debian.org/Bugs/Reporting>`_
-  - `Red Hat <https://bugzilla.redhat.com/>`_
-  - `OpenSUSE <https://bugzilla.opensuse.org/>`_
-  - `SUSE <https://bugzilla.suse.com/>`_
+- `Ubuntu <https://help.ubuntu.com/stable/ubuntu-help/report-ubuntu-bug.html.en>`_
+- `Fedora Project <https://docs.fedoraproject.org/en-US/quick-docs/howto-file-a-bug/>`_
+- `Arch Linux <https://bugs.archlinux.org/>`_
+- `Linux Mint <https://projects.linuxmint.com/reporting-an-issue.html>`_
+- `Debian GNU/Linux <https://www.debian.org/Bugs/Reporting>`_
+- `Red Hat <https://bugzilla.redhat.com/>`_
+- `OpenSUSE <https://bugzilla.opensuse.org/>`_
+- `SUSE <https://bugzilla.suse.com/>`_
 
 If you are sure that the problem is with the upstream kernel, please
 refer to the following document that describes how to report bugs and
 regressions to the developers:
 
-  - `Reporting issues`_
+- `Reporting issues`_
 
 .. _`Reporting issues`: https://docs.kernel.org/admin-guide/reporting-issues.html
 
