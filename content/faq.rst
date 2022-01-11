@@ -9,13 +9,15 @@ contact us at webmaster@kernel.org.
 
 Is Linux Kernel Free Software?
 ------------------------------
-Linux kernel is released under GNU GPL version 2 and is therefore Free
-Software as defined by the `Free Software Foundation`_. You may read the
-entire copy of the license in the COPYING_ file distributed with each
-release of the Linux kernel.
+Linux kernel is released under the terms of GNU GPL version 2 and is
+therefore Free Software as defined by the `Free Software Foundation`_.
+
+For more information, please consult the documentation:
+
+- `Linux kernel licensing rules`_
 
 .. _`Free Software Foundation`: https://www.fsf.org/
-.. _COPYING: /pub/linux/kernel/COPYING
+.. _`Linux kernel licensing rules`: https://docs.kernel.org/process/license-rules.html
 
 I heard that Linux ships with non-free "blobs"
 ----------------------------------------------
@@ -39,6 +41,21 @@ free-as-in-freedom setup, you will often need to go a lot further than
 just avoiding loadable binary-only firmware blobs.
 
 .. _`linux-firmware`: https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/
+
+Can I use the word "Linux" or the tux logo?
+-------------------------------------------
+Linux is a registered trademark of Linus Torvalds and its use is
+governed by the Linux Trademark Institute. Please consult the following
+page for further information:
+
+- `Trademark Usage`_
+
+The tux penguin logo was created by Larry Ewing using Gimp software. It
+is free to use, including commercially, as long as you give Larry Ewing
+proper credit ("if someone asks"). For any other permissions, please
+reach out to Mr. Larry Ewing directly.
+
+.. _`Trademark Usage`: https://www.linuxfoundation.org/trademark-usage/
 
 What does "stable/EOL" and "longterm" mean?
 -------------------------------------------
