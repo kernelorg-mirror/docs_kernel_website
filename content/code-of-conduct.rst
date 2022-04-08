@@ -33,6 +33,19 @@ the adoption of the Code of Conduct and who continue to uphold the professional
 standards of our community. If you have any questions about these reports,
 please write to <conduct@kernel.org>.
 
+March 2022
+----------
+
+Archival copy: https://lore.kernel.org/r/4401af50-083d-0239-6b7f-3454c8d69fec@linuxfoundation.org
+
+In the period of October 1, 2021 through March 31, 2022, the Code of
+Conduct Committee received the following reports:
+
+  - Unacceptable behavior or comments in email: 2
+
+The result of the investigation:
+  - Education and coaching clarifying the Code of Conduct conduct related to normal review process: 2
+
 September 2021
 ~~~~~~~~~~~~~~
 
