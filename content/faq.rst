@@ -5,7 +5,7 @@ Frequently asked questions
 :category: FAQ
 
 If you have questions, comments or concerns about the F.A.Q. please
-contact us at webmaster@kernel.org.
+contact us at helpdesk@kernel.org.
 
 Is Linux Kernel Free Software?
 ------------------------------

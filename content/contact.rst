@@ -8,14 +8,8 @@ Email is the only reliable way of contacting Kernel.org administrators.
 General contacts
 ----------------
 
-webmaster@kernel.org:
-    General requests and comments about kernel.org infrastructure.
-
-ftpadmin@kernel.org:
-    Questions or comments about kernel.org mirrors.
-
-keys@kernel.org:
-    Account requests (see FAQ_)
+helpdesk@kernel.org:
+    All questions about kernel.org infrastructure.
 
 **Please do not send general Linux questions or bug reports to these
 addresses. We do not have the resources to reply to them.**
