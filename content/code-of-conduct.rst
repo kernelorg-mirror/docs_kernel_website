@@ -18,9 +18,9 @@ The Linux kernel Code of Conduct Committee is currently made up of the
 following people:
 
   - Kristen Accardi <kristen.c.accardi@intel.com>
-  - Mishi Choudhary <mishi@linux.com>
   - Shuah Khan <skhan@linuxfoundation.org>
   - Greg Kroah-Hartman <gregkh@linuxfoundation.org>
+  - Joanna Lee <joanna.lee@gesmer.com>
 
 Committee members can be reached all at once by writing to
 <conduct@kernel.org>.
