@@ -42,6 +42,7 @@ MAJOR_JUMPS = {
                '3': '2.6.39',
                '4': '3.19',
                '5': '4.20',
+               '6': '5.19',
               }
 
 if 'GIT_REPOS' in os.environ.keys():
