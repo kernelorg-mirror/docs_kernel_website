@@ -78,7 +78,7 @@ Linux kernel follows a simple release cadence:
 
 - after each mainline release, there is a 2-week "merge window" period
   during which new major features are introduced into the kernel
-- after the merge window closes, there is a is a 7-week bugfix and
+- after the merge window closes, there is a 7-week bugfix and
   stabilization period with weekly "release candidate" snapshots
 - rc7 is usually the last release candidate, though occasionally there
   may be additional rc8+ releases if that is deemed necessary
