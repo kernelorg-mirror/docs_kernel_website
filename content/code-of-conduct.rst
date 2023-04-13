@@ -6,10 +6,11 @@ Code of Conduct
 :date: 2020-01-02
 
 The Linux kernel community operates a `Code of Conduct`_ based on the
-`Contributor Covenant Code of Conduct`_.
+`Contributor Covenant Code of Conduct`_ with a `Linux Kernel Contributor Covenant Code of Conduct Interpretation`_.
 
 .. _`Code of Conduct`: https://www.kernel.org/doc/html/latest/process/code-of-conduct.html
 .. _`Contributor Covenant Code of Conduct`: https://www.contributor-covenant.org/version/1/4/code-of-conduct.html
+.. _`Linux Kernel Contributor Covenant Code of Conduct Interpretation`: https://www.kernel.org/doc/html/latest/process/code-of-conduct-interpretation.html
 
 Code of Conduct Committee
 -------------------------
@@ -32,6 +33,27 @@ We would like to thank the Linux kernel community members who have supported
 the adoption of the Code of Conduct and who continue to uphold the professional
 standards of our community. If you have any questions about these reports,
 please write to <conduct@kernel.org>.
+
+March 2023
+~~~~~~~~~~
+Archival copy: https://lore.kernel.org/r/557ef895-ad2d-eff9-7cb8-70dbcf41adea@linuxfoundation.org
+
+In the period of October 1, 2022 through March 31, 2023, the Code of
+Conduct Committee received the following reports:
+
+  - Unacceptable behavior or comments in email: 6
+
+The result of the investigation:
+ - Education and coaching clarifying the Code of Conduct conduct related to normal review and patch acceptance process: 1
+ - Clarification on the Code of Conduct conduct related to maintainer rights and responsibility to reject code: 5
+
+The reports were about the decisions made in rejecting code and these actions are not viewed as violations of the Code of Conduct.
+
+Please see the excerpt from the Responsibilities section in the `Linux Kernel Contributor Covenant Code of Conduct Interpretation`_ document:
+
+	setting expertise expectations, making decisions and rejecting unsuitable
+	contributions are not viewed as a violation of the Code of Conduct.
+
 
 September 2022
 ~~~~~~~~~~~~~~
