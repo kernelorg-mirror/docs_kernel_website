@@ -34,6 +34,27 @@ the adoption of the Code of Conduct and who continue to uphold the professional
 standards of our community. If you have any questions about these reports,
 please write to <conduct@kernel.org>.
 
+September 2023
+~~~~~~~~~~~~~~
+Archival copy: https://lore.kernel.org/r/3351be6b-854e-479d-832c-83cb8829c010@linuxfoundation.org
+
+In the period of April 1, 2023 through September 30, 2023, the Code of
+Conduct Committee received the following reports:
+
+ - Unacceptable behavior or comments in email: 4
+
+The result of the investigation:
+ - Education and coaching clarifying the Code of Conduct conduct related to normal review and patch acceptance process: 3
+ - Clarification on the Code of Conduct conduct related to maintainer rights and responsibility to reject code: 1
+
+The reports were about the discussion during the patch review and decisions made in rejecting code and these actions are not viewed as violations of the Code of Conduct.
+
+Please see the excerpt from the Responsibilities section in the `Linux Kernel Contributor Covenant Code of Conduct Interpretation`_ document:
+
+	setting expertise expectations, making decisions and rejecting unsuitable
+	contributions are not viewed as a violation of the Code of Conduct.
+
+
 March 2023
 ~~~~~~~~~~
 Archival copy: https://lore.kernel.org/r/557ef895-ad2d-eff9-7cb8-70dbcf41adea@linuxfoundation.org
