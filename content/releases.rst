@@ -41,7 +41,7 @@ Longterm
     Version  Maintainer                       Released     Projected EOL
     ======== ================================ ============ ==================
     6.1      Greg Kroah-Hartman & Sasha Levin 2022-12-11   Dec, 2026
-    5.15     Greg Kroah-Hartman & Sasha Levin 2021-10-31   Oct, 2026
+    5.15     Greg Kroah-Hartman & Sasha Levin 2021-10-31   Dec, 2026
     5.10     Greg Kroah-Hartman & Sasha Levin 2020-12-13   Dec, 2026
     5.4      Greg Kroah-Hartman & Sasha Levin 2019-11-24   Dec, 2025
     4.19     Greg Kroah-Hartman & Sasha Levin 2018-10-22   Dec, 2024
