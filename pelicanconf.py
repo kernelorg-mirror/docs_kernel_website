@@ -28,7 +28,7 @@ from plugins import releases
 # NB: Don't add a kernel to longterm if it's the only stable kernel currently
 #     listed on www.kernel.org. This will break people's scripts, so we don't
 #     support doing it. Wait till there's an x.x.1 of the next stable branch.
-LONGTERM_KERNELS = ('6.1', '5.15', '5.10', '5.4', '4.19', '4.14',
+LONGTERM_KERNELS = ('6.6', '6.1', '5.15', '5.10', '5.4', '4.19', '4.14',
                     '4.9', '4.4', '4.1', '3.18', '3.10', '3.2')
 EOL_KERNELS = ('3.2', '3.4', '3.10', '3.12', '3.14', '3.16', '3.18', '3.19',
                '4.0', '4.1', '4.2', '4.3', '4.4', '4.5', '4.6', '4.7', '4.8',
