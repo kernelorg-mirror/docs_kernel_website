@@ -41,19 +41,24 @@ Archival copy: https://lore.kernel.org/r/3351be6b-854e-479d-832c-83cb8829c010@li
 In the period of April 1, 2023 through September 30, 2023, the Code of
 Conduct Committee received the following reports:
 
- - Unacceptable behavior or comments in email: 4
+- Unacceptable behavior or comments in email: 4
 
 The result of the investigation:
- - Education and coaching clarifying the Code of Conduct conduct related to normal review and patch acceptance process: 3
- - Clarification on the Code of Conduct conduct related to maintainer rights and responsibility to reject code: 1
 
-The reports were about the discussion during the patch review and decisions made in rejecting code and these actions are not viewed as violations of the Code of Conduct.
+- Education and coaching clarifying the Code of Conduct conduct related
+  to normal review and patch acceptance process: 3
+- Clarification on the Code of Conduct conduct related to maintainer
+  rights and responsibility to reject code: 1
 
-Please see the excerpt from the Responsibilities section in the `Linux Kernel Contributor Covenant Code of Conduct Interpretation`_ document:
+The reports were about the discussion during the patch review and
+decisions made in rejecting code and these actions are not viewed as
+violations of the Code of Conduct.
 
-	setting expertise expectations, making decisions and rejecting unsuitable
-	contributions are not viewed as a violation of the Code of Conduct.
+Please see the excerpt from the Responsibilities section in the `Linux
+Kernel Contributor Covenant Code of Conduct Interpretation`_ document::
 
+    setting expertise expectations, making decisions and rejecting unsuitable
+    contributions are not viewed as a violation of the Code of Conduct.
 
 March 2023
 ~~~~~~~~~~
@@ -65,15 +70,20 @@ Conduct Committee received the following reports:
   - Unacceptable behavior or comments in email: 6
 
 The result of the investigation:
- - Education and coaching clarifying the Code of Conduct conduct related to normal review and patch acceptance process: 1
- - Clarification on the Code of Conduct conduct related to maintainer rights and responsibility to reject code: 5
 
-The reports were about the decisions made in rejecting code and these actions are not viewed as violations of the Code of Conduct.
+ - Education and coaching clarifying the Code of Conduct conduct related
+   to normal review and patch acceptance process: 1
+ - Clarification on the Code of Conduct conduct related to maintainer
+   rights and responsibility to reject code: 5
 
-Please see the excerpt from the Responsibilities section in the `Linux Kernel Contributor Covenant Code of Conduct Interpretation`_ document:
+The reports were about the decisions made in rejecting code and these
+actions are not viewed as violations of the Code of Conduct.
 
-	setting expertise expectations, making decisions and rejecting unsuitable
-	contributions are not viewed as a violation of the Code of Conduct.
+Please see the excerpt from the Responsibilities section in the `Linux
+Kernel Contributor Covenant Code of Conduct Interpretation`_ document::
+
+    setting expertise expectations, making decisions and rejecting unsuitable
+    contributions are not viewed as a violation of the Code of Conduct.
 
 
 September 2022
@@ -86,7 +96,9 @@ Conduct Committee received the following reports:
   - Unacceptable behavior or comments in email: 1
 
 The result of the investigation:
-  - Resolved with a public apology from the violator with a commitment from them to abide by the Code of Conduct in the future.
+
+  - Resolved with a public apology from the violator with a commitment
+    from them to abide by the Code of Conduct in the future.
 
 March 2022
 ----------
@@ -99,7 +111,9 @@ Conduct Committee received the following reports:
   - Unacceptable behavior or comments in email: 2
 
 The result of the investigation:
-  - Education and coaching clarifying the Code of Conduct conduct related to normal review process: 2
+
+  - Education and coaching clarifying the Code of Conduct conduct
+    related to normal review process: 2
 
 September 2021
 ~~~~~~~~~~~~~~
@@ -112,7 +126,9 @@ Conduct Committee received the following reports:
   - Unacceptable behavior or comments in email: 1
 
 The result of the investigation:
-  - Education and coaching clarifying the Code of Conduct conduct related to normal review process: 1
+
+  - Education and coaching clarifying the Code of Conduct conduct
+    related to normal review process: 1
 
 April 2021
 ~~~~~~~~~~
@@ -125,10 +141,13 @@ Conduct Committee received the following reports:
   - Unacceptable behavior or comments in email (3rd party): 4
 
 The result of the investigation:
+
   - Education and coaching: 1
-  - Public response to call attention to the behavior and request correction with consequence of ban if behavior persists: 1
+  - Public response to call attention to the behavior and request
+    correction with consequence of ban if behavior persists: 1
   - Public response to attention to the behavior and request correction: 1
-  - Clarification on the Code of Conduct conduct related to maintainer rights and responsibility to reject code: 1
+  - Clarification on the Code of Conduct conduct related to maintainer
+    rights and responsibility to reject code: 1
 
 October 2020
 ~~~~~~~~~~~~
@@ -143,6 +162,7 @@ received the following reports:
   - Unacceptable comments toward a company: 1
 
 The result of the investigation:
+
   - Education and coaching: 1
   - Locking of github repo for any comments: 1
   - Clarification that the Code of Conduct covers conduct related to individual developers only: 1
