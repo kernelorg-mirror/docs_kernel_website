@@ -18,18 +18,11 @@ Here is how you would do it.
 
      wget -c https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/clone.bundle
 
-2. Once the download is completed, verify that the bundle has downloaded
-   correctly::
-
-     git bundle verify clone.bundle
-     ...
-     clone.bundle is okay
-
-3. Next, clone from the bundle::
+2. Next, clone from the bundle::
 
      git clone clone.bundle linux
 
-4. Now, point the origin to the live git repository and get the latest changes::
+3. Now, point the origin to the live git repository and get the latest changes::
 
      cd linux
      git remote remove origin
