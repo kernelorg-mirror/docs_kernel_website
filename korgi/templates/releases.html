@@ -36,7 +36,12 @@
             </td>
         </tr>
         </table>
-
+        <!--//
+            // Wait! Are you looking at the source because you are trying to parse the releases table?
+            // Save yourself a lot of effort and use these instead:
+            // - https://www.kernel.org/releases.json
+            // - https://www.kernel.org/finger_banner
+            //-->
         <table id="releases">
         {% for (label, version, iseol, timestamp, isodate, source, sign, patch, incr, changelog, gitweb, diffview) in current_releases %}
         <tr align="left">
