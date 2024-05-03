@@ -34,6 +34,37 @@ the adoption of the Code of Conduct and who continue to uphold the professional
 standards of our community. If you have any questions about these reports,
 please write to <conduct@kernel.org>.
 
+March 2024
+~~~~~~~~~~
+Archival copy: https://lore.kernel.org/r/355aee5f-13ce-4e20-9ce8-e5bcddd14bc2@linuxfoundation.org
+
+In the period of October 1, 2023 through March 31, 2024, the Code of
+Conduct Committee received the following reports:
+
+- Unprofessional behavior or comments in email: 2
+
+The result of the investigation:
+
+- Education and coaching clarifying the role of Code of Conduct
+  conduct on conversations that don't go against the CoC.
+- Education and coaching the individuals on the impact of making
+  unprofessional comments which could be misunderstood leading
+  to negative impressions about the community.
+
+The reports were about the offhand comments made while rejecting
+the code which are not violations of the Code of Conduct
+
+Unacceptable behavior or comments on a private invitee only chat
+channel: 1
+
+- Education and coaching clarifying the role of Code of Conduct
+  conduct on conversations that occur on a private chat channel.
+
+We would like to thank the Linux kernel community members who have
+supported the adoption of the Code of Conduct and who continue to
+uphold the professional standards of our community. If you have
+questions about this report, please write to <conduct@kernel.org>.
+
 September 2023
 ~~~~~~~~~~~~~~
 Archival copy: https://lore.kernel.org/r/3351be6b-854e-479d-832c-83cb8829c010@linuxfoundation.org
