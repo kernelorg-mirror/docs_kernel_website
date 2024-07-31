@@ -1,6 +1,6 @@
-#!/usr/bin/python -tt
+#!/usr/bin/env python3
 ##
-# Copyright (C) 2013 by Kernel.org
+# Copyright (C) 2013-2024 by Kernel.org
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -17,37 +17,36 @@
 # Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA
 # 02111-1307, USA.
 #
-import os
-import time
 import datetime
+import json
+import os
+import sys
 import re
-
-from git import Repo
-
+import time
 import requests
 
-from distutils.version import StrictVersion
-
+from packaging.version import Version
+from feedgenerator import Rss201rev2Feed
+from git import Repo
 from pelican import signals, utils
 
-from feedgenerator import Rss201rev2Feed
-import json
 
 # Pelican plugin API
 def register():
     signals.article_generator_init.connect(kernel_releases_init)
-    signals.article_generate_context.connect(fetch_kernel_releases)
+    signals.article_generator_init.connect(fetch_kernel_releases)
 
 
 def kernel_releases_init(gen):
     gen.releases_instance = KernelReleases(gen)
 
 
-def fetch_kernel_releases(gen, metadata):
+def fetch_kernel_releases(gen):
     gen.context['current_releases'] = gen.releases_instance.current_releases
     gen.context['latest_release'] = gen.releases_instance.latest_release
 
-class KernelReleases():
+
+class KernelReleases:
     def __init__(self, generator):
 
         self.rss_path = os.path.join(generator.output_path, 'feeds', 'kdist.xml')
@@ -62,23 +61,23 @@ class KernelReleases():
 
         settings = generator.settings
 
-        GIT_MAINLINE = settings.get('GIT_MAINLINE')
-        GIT_STABLE = settings.get('GIT_STABLE')
-        GIT_NEXT = settings.get('GIT_NEXT')
+        git_mainline = settings.get('GIT_MAINLINE')
+        git_stable = settings.get('GIT_STABLE')
+        git_next = settings.get('GIT_NEXT')
 
-        LONGTERM_KERNELS = settings.get('LONGTERM_KERNELS')
-        EOL_KERNELS = settings.get('EOL_KERNELS')
+        longterm_kernels = settings.get('LONGTERM_KERNELS')
+        eol_kernels = settings.get('EOL_KERNELS')
 
-        self.MAJOR_JUMPS = settings.get('MAJOR_JUMPS')
+        self.major_jumps = settings.get('MAJOR_JUMPS')
 
         self.release_tracker = settings.get('RELEASE_TRACKER')
 
-        repo = Repo(GIT_MAINLINE)
-        tagrefs = self.get_tagref_list(repo)
+        repo = Repo(git_mainline)
+        tagrefs = KernelReleases.get_tagref_list(repo)
 
-        rc_reg = re.compile('v.*-rc\d+$')
+        rc_reg = re.compile(r'v.*-rc\d+$')
         mainline_rc = self.find_latest_matching(tagrefs, rc_reg)
-        rel_reg = re.compile('v[^-]*\d+$')
+        rel_reg = re.compile(r'v[^-]*\d+$')
         mainline_rel = self.find_latest_matching(tagrefs, rel_reg)
 
         # if mainline_rel is newer than mainline_rc, ignore mainline_rc
@@ -86,7 +85,7 @@ class KernelReleases():
             mainline_rc = None
 
         # Move on to the stable repo
-        repo = Repo(GIT_STABLE)
+        repo = Repo(git_stable)
         # ignore any tags older than 12 months
         cutoff = time.time() - 31536000
 
@@ -96,7 +95,7 @@ class KernelReleases():
         tagrefs = self.get_tagref_list(repo, cutoff)
 
         # find all tags matching vX.X.X
-        rel_reg = re.compile('v\d+\.\d+\.\d+$')
+        rel_reg = re.compile(r'v\d+\.\d+\.\d+$')
         matched = []
         for tagref in tagrefs:
             if rel_reg.match(tagref.name):
@@ -108,7 +107,7 @@ class KernelReleases():
         for tagref in matched:
             # does it match a longterm release?
             ignore = False
-            for ver in LONGTERM_KERNELS:
+            for ver in longterm_kernels:
                 if tagref.name.find(ver+'.') == 1:
                     # this is a long-term release, ignore
                     ignore = True
@@ -129,7 +128,7 @@ class KernelReleases():
 
             seen.append(regex)
 
-        stable = sorted(stable, key=lambda x: StrictVersion(x[0][1:]), reverse=True)
+        stable = sorted(stable, key=lambda x: Version(x[0][1:]), reverse=True)
 
         releases = []
 
@@ -144,8 +143,8 @@ class KernelReleases():
             latest = self.make_release_line(mainline_rel, 'latest')
         else:
             latest = self.make_release_line(latest_stable, 'latest')
-            # if latest stable is newer than latest mainline, but there are no
-            # -rc kernels, list the latest mainline in the releases table anyway.
+            # if the latest stable is newer than the latest mainline, but there are no
+            # -rc kernels, list the latest mainline in the "releases" table anyway.
             if mainline_rc is None:
                 releases.append(self.make_release_line(mainline_rel, 'mainline'))
 
@@ -154,7 +153,7 @@ class KernelReleases():
         # add other stable kernels and mark EOL accordingly
         for rel in stable:
             iseol = False
-            for eolrel in EOL_KERNELS:
+            for eolrel in eol_kernels:
                 if rel[0].find(eolrel + '.') == 1:
                     iseol = True
                     break
@@ -165,14 +164,14 @@ class KernelReleases():
 
             releases.append(self.make_release_line(rel, 'stable', iseol))
 
-        # find latest long-term releases
-        for rel in LONGTERM_KERNELS:
+        # find all latest long-term releases
+        for rel in longterm_kernels:
             components = rel.split('.')
             regex = re.compile('^v' + '\\.'.join(components) + '\\.\\d+$')
             found = self.find_latest_matching(tagrefs, regex)
             if found is not None:
                 iseol = False
-                for eolrel in EOL_KERNELS:
+                for eolrel in eol_kernels:
                     if found[0].find(eolrel + '.') == 1:
                         iseol = True
                         break
@@ -184,7 +183,7 @@ class KernelReleases():
                 releases.append(self.make_release_line(found, 'longterm', iseol))
 
         # now find latest tag in linux-next
-        repo = Repo(GIT_NEXT)
+        repo = Repo(git_next)
         tagrefs = self.get_tagref_list(repo, cutoff)
 
         regex = re.compile('^next-')
@@ -206,10 +205,9 @@ class KernelReleases():
 
     def check_release_tracker(self):
         if 'PELICAN_DRYRUN' in os.environ.keys():
-            print 'PELICAN_DRYRUN found, not doing release tracking'
+            sys.stderr.write('PELICAN_DRYRUN found, not doing release tracking')
             return
 
-        import socket
         send_mail = True
 
         # Load known releases from the release tracker file
@@ -220,7 +218,7 @@ class KernelReleases():
                 fh = open(self.release_tracker, 'r')
                 known = json.load(fh)
                 fh.close()
-            except:
+            except Exception as ex:  # noqa
                 # it's better to not announce something than to spam
                 # people needlessly.
                 send_mail = False
@@ -230,18 +228,19 @@ class KernelReleases():
             if release not in known:
                 # This appears to be a new release.
                 if chunks[5] is None:
-                    # Don't announce anything that doesn't have source.
+                    # Don't announce anything that doesn't have a source.
                     continue
 
                 known.append(release)
                 if send_mail:
-                    self.send_release_email(chunks)
+                    KernelReleases.send_release_email(chunks)
 
         fh = open(self.release_tracker, 'w')
         json.dump(known, fh, indent=4)
         fh.close()
 
-    def send_release_email(self, chunks):
+    @staticmethod
+    def send_release_email(chunks):
         (label, release, iseol, timestamp, isodate, source, sign, patch, incr, changelog, gitweb, diffview) = chunks
         if iseol:
             eol = ' (EOL)'
@@ -250,7 +249,7 @@ class KernelReleases():
 
         import smtplib
         from email.mime.text import MIMEText
-        from email.Utils import COMMASPACE, formatdate
+        from email.utils import formatdate
 
         announce_list = 'linux-kernel-announce@vger.kernel.org'
         smtp_server = 'mail.kernel.org'
@@ -261,25 +260,25 @@ class KernelReleases():
         if 'SMTP_SERVER' in os.environ.keys():
             smtp_server = os.environ['SMTP_SERVER']
 
-        body = ( "Linux kernel version %s%s is now available:\r\n" % (release, eol)
-               + "\r\n"
-               + "Full source:    %s" % source)
+        body = (f"Linux kernel version {release}{eol} is now available:\r\n"
+                "\r\n"
+                f"Full source:    {source}")
 
         if patch is not None:
-            body += ( "\r\n"
-                    + "Patch:          %s" % patch)
+            body += ("\r\n"
+                     f"Patch:          {patch}")
 
         if sign is not None:
-            body += ( "\r\n"
-                    + "PGP Signature:  %s" % sign)
+            body += ("\r\n"
+                     f"PGP Signature:  {sign}")
 
         if diffview is not None:
-            body += ( "\r\n\r\n"
-                    + "You can view the summary of the changes at the following URL:\r\n"
-                    + "%s\r\n\r\n" % diffview)
+            body += ("\r\n\r\n"
+                     "You can view the summary of the changes at the following URL:\r\n"
+                     f"{diffview}\r\n\r\n")
 
         msg = MIMEText(body)
-        msg['Subject'] = "Linux kernel %s released" % release
+        msg['Subject'] = f"Linux kernel {release} released"
         msg['From'] = 'Linux Kernel Distribution System <kdist@linux.kernel.org>'
         msg['To'] = announce_list
         msg['Date'] = formatdate(localtime=True)
@@ -360,8 +359,8 @@ class KernelReleases():
     def generate_rss_feed(self):
         feed = Rss201rev2Feed(
             title='Latest Linux Kernel Versions',
-            link='http://www.kernel.org',
-            feed_url='http://www.kernel.org/feeds/kdist.xml',
+            link='https://www.kernel.org',
+            feed_url='https://www.kernel.org/feeds/kdist.xml',
             description='Latest Linux Kernel Versions',
             creator='FTP Admin <ftpadmin@kernel.org>'
         )
@@ -373,38 +372,38 @@ class KernelReleases():
             else:
                 eol = ''
 
-            contents = '''
+            contents = f'''
             <table>
-                <tr><th align="right">Version:</th><td><strong>%s%s</strong> (%s)</td></tr>
-                <tr><th align="right">Released:</th><td>%s</td></tr>
-            ''' % (release, eol, label, isodate)
+                <tr><th align="right">Version:</th><td><strong>{release}{eol}</strong> ({label})</td></tr>
+                <tr><th align="right">Released:</th><td>{isodate}</td></tr>
+            '''
 
             if source:
-                contents += '''
-                <tr><th align="right">Source:</th><td><a href="%s">%s</a></td></tr>''' % (source, os.path.basename(source))
+                contents += f'''
+                <tr><th align="right">Source:</th><td><a href="{source}">{os.path.basename(source)}</a></td></tr>'''
 
             if sign:
-                contents += '''
-                <tr><th align="right">PGP Signature:</th><td><a href="%s">%s</a></td></tr>''' % (sign, os.path.basename(sign))
+                contents += f'''
+                <tr><th align="right">PGP Signature:</th><td><a href="{sign}">{os.path.basename(sign)}</a></td></tr>'''
 
             if patch:
-                contents += '''
-                <tr><th align="right">Patch:</th><td><a href="%s">full</a>''' % patch
+                contents += f'''
+                <tr><th align="right">Patch:</th><td><a href="{patch}">full</a>'''
                 if incr:
-                    contents += ''' (<a href="%s">incremental</a>)''' % incr
+                    contents += f''' (<a href="{incr}">incremental</a>)'''
                 contents += '''</td></tr>'''
 
             if changelog:
-                contents += '''
-                <tr><th align="right">ChangeLog:</th><td><a href="%s">%s</a></td></tr>''' % (changelog, os.path.basename(changelog))
+                contents += f'''
+                <tr><th align="right">ChangeLog:</th><td><a href="{changelog}">{os.path.basename(changelog)}</a></td></tr>'''  # noqa
 
             contents += '''
             </table>'''
 
             feed.add_item(
-                title='%s: %s' % (release, label),
-                link='http://www.kernel.org/',
-                unique_id='kernel.org,%s,%s,%s' % (label, release, isodate),
+                title=f'{release}: {label}',
+                link='https://www.kernel.org/',
+                unique_id=f'kernel.org,{label},{release},{isodate}',
                 description=contents,
                 pubdate=datetime.datetime.fromtimestamp(timestamp)
             )
@@ -417,13 +416,14 @@ class KernelReleases():
         feed.write(fp, 'utf-8')
         fp.close()
 
-    def _get_release_dir_by_version(self, version):
+    @staticmethod
+    def _get_release_dir_by_version(version):
         urlpath = 'pub/linux/kernel/v%s.x' % version[0]
 
         return urlpath
 
     def _get_source_path_by_version(self, version):
-        dirpath = self._get_release_dir_by_version(version)
+        dirpath = KernelReleases._get_release_dir_by_version(version)
         path = '%s/%s/linux-%s.tar.xz' % (self.wwwsite, dirpath, version)
 
         return path
@@ -456,7 +456,7 @@ class KernelReleases():
         bits = release.split('.')
 
         if len(bits) < 2:
-            # What happen? Someone set up us something weird.
+            # What happened?
             return None, None
 
         mainline = None
@@ -471,7 +471,7 @@ class KernelReleases():
                     mainlbit = int(rcbits.pop(-1))
 
                     if lastbit > 1:
-                        # We have an incremental
+                        # We have an incremental bit
                         prevbit = str(lastbit - 1)
                         prevrc = '%s-rc%s' % (mainlbit, prevbit)
                         newbits = bits[:-1] + [prevrc]
@@ -479,8 +479,8 @@ class KernelReleases():
                     # Now arrive at mainline
                     if mainlbit == 0:
                         # We're looking at X.0-rcX. Use the MAJOR_JUMPS mapping
-                        if bits[0] in self.MAJOR_JUMPS:
-                            return self.MAJOR_JUMPS[bits[0]], incremental
+                        if bits[0] in self.major_jumps:
+                            return self.major_jumps[bits[0]], incremental
                         # Linus doesn't pre-announce major jumps...
                         # so just return None until we add it to the mapping.
                         return None, incremental
@@ -498,8 +498,8 @@ class KernelReleases():
                 lastbit = int(bits.pop(-1))
                 if lastbit == 0:
                     # Use MAJOR_JUMPS mapping again
-                    if bits[0] in self.MAJOR_JUMPS:
-                        return self.MAJOR_JUMPS[bits[0]], None
+                    if bits[0] in self.major_jumps:
+                        return self.major_jumps[bits[0]], None
                     return None, None
 
                 prevbit = str(lastbit - 1)
@@ -522,7 +522,7 @@ class KernelReleases():
                 bits.append(prevbit)
                 incremental = '.'.join(bits)
             else:
-                # We don't have a previous incremental in this case
+                # We don't have a previous incremental bit in this case
                 incremental = None
 
             return mainline, incremental
@@ -530,9 +530,6 @@ class KernelReleases():
         except ValueError:
             # Not sure what happened, but let's pretend it didn't work
             return None, None
-
-        return None, None
-
 
     def make_release_line(self, rel, label, iseol=False):
         # drop the leading 'v':
@@ -579,7 +576,7 @@ class KernelReleases():
             elif label.find('mainline') == 0:
                 cgitpath = 'torvalds'
                 gitweb = '%s/%s/h/v%s' % (self.gitsite, cgitpath, release)
-                # if it's an -rc kernel, link to tarball and patch generated by cgit
+                # if it's a -rc kernel, link to tarball and patch generated by cgit
                 if release.find('-rc') > 0:
                     # -rc kernel tarball/patches are cgit-generated and have no signatures
                     sign = None
@@ -607,17 +604,18 @@ class KernelReleases():
             if incr and not self.check_url_exists(incr):
                 incr = None
 
-        # This needs to be refactored into a hash. In my defense,
-        # it started with 3 entries.
+        # This needs to be refactored into a hash.
+        # In my defence, it started with 3 entries.
         return label, release, iseol, timestamp, isodate, source, sign, patch, incr, changelog, gitweb, diffview
 
-    def get_tagref_list(self, repo, cutoff=None):
+    @staticmethod
+    def get_tagref_list(repo, cutoff=None):
         tagrefs = []
         for tagref in repo.tags:
             try:
                 tdate = tagref.tag.tagged_date
-            except:
-                # Some of the tags break git-python due to not having an associated
+            except Exception as ex:  # noqa
+                # Some tags break git-python due to not having an associated
                 # commit. Work around this limitation by ignoring those tags.
                 continue
 
@@ -640,15 +638,17 @@ class KernelReleases():
 
         return True
 
-    def find_latest_matching(self, tagrefs, regex, blacklist=[]):
+    def find_latest_matching(self, tagrefs, regex, badlist=None):
         current = None
+        if badlist is None:
+            badlist = list()
 
         for tagref in tagrefs:
             # Does it match the regex?
             if not regex.match(tagref.name):
                 continue
 
-            if tagref.name in blacklist:
+            if tagref.name in badlist:
                 continue
 
             tdate = tagref.tag.tagged_date
@@ -662,9 +662,8 @@ class KernelReleases():
 
         if not self._check_tarball_by_tagname(current.name):
             # Tarball for the latest tag does not exist.
-            # Add it to blacklist and try again.
-            blacklist.append(current.name)
-            return self.find_latest_matching(tagrefs, regex, blacklist)
+            # Add it to the badlist and try again.
+            badlist.append(current.name)
+            return self.find_latest_matching(tagrefs, regex, badlist)
 
         return current.name, current.tag.tagged_date
-

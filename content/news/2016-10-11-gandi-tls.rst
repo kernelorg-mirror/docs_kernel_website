@@ -3,7 +3,7 @@ Gandi.net TLS certificates
 
 :category: Site news
 
-.. image:: |filename|images/gandi-logo.png
+.. image:: |static|images/gandi-logo.png
   :height: 60px
   :width: 202px
   :alt: Gandi logo

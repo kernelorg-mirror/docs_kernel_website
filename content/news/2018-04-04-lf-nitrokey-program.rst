@@ -19,7 +19,7 @@ we now offer a detailed guide within the kernel documentation tree:
 
 - `Kernel Maintainer PGP Guide`_
 
-.. image:: |filename|images/nitrokey-logo.png
+.. image:: |static|images/nitrokey-logo.png
   :height: 70px
   :width: 207px
   :alt: Nitrokey logo

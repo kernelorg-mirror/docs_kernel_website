@@ -3,7 +3,7 @@ Introducing Fastly CDN
 
 :category: Site news
 
-.. image:: |filename|images/fastly-logo.png
+.. image:: |static|images/fastly-logo.png
   :height: 60px
   :width: 156px
   :alt: Fastly logo

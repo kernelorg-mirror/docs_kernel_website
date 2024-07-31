@@ -3,7 +3,7 @@ Fast new frontends with Packet
 
 :category: Site news
 
-.. image:: |filename|images/packet-logo.png
+.. image:: |static|images/packet-logo.png
   :height: 60px
   :width: 176px
   :alt: Packet logo
