@@ -204,8 +204,8 @@ class KernelReleases:
         return r.status_code == 200
 
     def check_release_tracker(self):
-        if 'PELICAN_DRYRUN' in os.environ.keys():
-            sys.stderr.write('PELICAN_DRYRUN found, not doing release tracking')
+        if 'PELICAN_DRYRUN' in os.environ:
+            sys.stderr.write('PELICAN_DRYRUN found, not doing release tracking\n')
             return
 
         send_mail = True
