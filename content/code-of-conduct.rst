@@ -34,6 +34,69 @@ the adoption of the Code of Conduct and who continue to uphold the professional
 standards of our community. If you have any questions about these reports,
 please write to <conduct@kernel.org>.
 
+March 2025
+~~~~~~~~~~
+
+Archival copy: https://lore.kernel.org/all/2025043021-reprogram-gloss-acb5@gregkh/
+
+Updates to the Code of Conduct documents:
+
+ - The Code of Conduct documentation has been updated to clearly
+   outline the enforcement when Unacceptable Behavior Code
+   of Conduct Violations take place, and outline the Technical
+   Advisory Board's role in approving remedial actions recommended
+   by the Code of Conduct Committee.
+
+Reference:
+   https://docs.kernel.org/process/code-of-conduct-interpretation.html#code-of-conduct-interpretation
+
+In the period of April 1, 2024 through March 31, 2025, the Code of
+Conduct Committee received the following reports:
+
+Reports received: 17
+
+Development process related reports:
+
+ - Education and coaching on maintainers' right to accept or reject
+   patches. Clarifying the expectations that developers can't demand
+   their patches to be reviewed and/or accepted by the community.
+   These reports were about a developer demanding their patch to be
+   accepted even after repeated attempts by maintainers advising the
+   developers to understand the development process.
+
+Code of Conduct scope and enforcement related reports:
+
+ - Education and coaching on the role and scope of the Code of Conduct.
+   Several reports from people outside the kernel community reporting
+   past incidents before the Code of Conduct was adopted. Reports
+   resolved clarifying the scope and validity of reports about past
+   incidents before adopting the Code of Conduct.
+
+Insensitive comments reports:
+
+ - Education and coaching on the role and scope of the Code of Conduct.
+   Reports about Office of Foreign Assets Control (OFAC) related actions
+   and offhand comments in technical discussions that do not rise to the
+   level of violations.
+
+Unacceptable behavior or comments in email: 6
+
+- 4 reports resolved instituting remedial measures on two individuals
+  restricting their participation in development process.
+
+  -- Rejecting pull requests from an individual for a full release cycle.
+     Reference: https://lore.kernel.org/all/6740fc3aabec0_5eb129497@dwillia2-xfh.jf.intel.com.notmuch/
+  -- Banning an individual for 3 months from Linux kernel mailing lists.
+     Reference: https://lore.kernel.org/all/67cf7499597e9_1198729450@dwillia2-xfh.jf.intel.com.notmuch/
+
+- Others
+  - Resolved with the individuals making amends for their behaviors.
+
+We would like to thank the Linux kernel community members who have
+supported the adoption of the Code of Conduct and who continue to
+uphold the professional standards of our community. If you have
+questions about this report, please write to <conduct@kernel.org>.
+
 March 2024
 ~~~~~~~~~~
 Archival copy: https://lore.kernel.org/r/355aee5f-13ce-4e20-9ce8-e5bcddd14bc2@linuxfoundation.org
