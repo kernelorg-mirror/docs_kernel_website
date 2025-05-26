@@ -86,6 +86,11 @@ Linux kernel follows a simple release cadence:
 So, to find the approximate date of the next mainline kernel release,
 take the date of the previous mainline release and add 9-10 weeks.
 
+You can also subscribe to the releases calendar that forecasts key
+development dates for the upcoming kernels:
+
+- https://www.kernel.org/releases-calendar.ics
+
 What is the next longterm release going to be?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Longterm kernels are picked based on various factors -- major new
