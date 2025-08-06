@@ -74,9 +74,9 @@ That should display the message regardless in which mailing list archive
 it's stored.
 
 
-.. _lore.kernel.org: https://lore.kernel.org/lists.html
+.. _lore.kernel.org: https://lore.kernel.org/
 .. _erol.kernel.org: https://erol.kernel.org/
-.. _`listing of currently hosted archives`: https://lore.kernel.org/lists.html
+.. _`listing of currently hosted archives`: https://lore.kernel.org/
 .. _`Adding list archives to lore.kernel.org`: https://korg.wiki.kernel.org/userdoc/lore
 .. _`Public Inbox`: https://public-inbox.org/design_notes.html
 .. _grokmirror: https://github.com/mricon/grokmirror
