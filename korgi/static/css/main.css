@@ -360,4 +360,88 @@ dt {
     #banner li {
         padding: 0 0.5em;
     }
+
+    #extras {
+        width: auto;
+        margin: 1em;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1em;
+    }
+    #extras > div {
+        height: auto;
+    }
+    #extras > .blogroll {
+        float: none;
+        width: 100%;
+        padding: 0.5em 1em;
+        box-sizing: border-box;
+    }
+    #extras > .blogroll ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.25em 1em;
+    }
+    #extras > .blogroll li {
+        width: auto;
+        float: none;
+        flex: 1 1 30%;
+    }
+    #extras > .social {
+        float: none;
+        width: 100%;
+        padding: 0.5em 1em;
+        box-sizing: border-box;
+    }
+    #extras > .social ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 0.5em;
+    }
+    #extras > .social li {
+        flex: 1 1 30%;
+    }
+
+    #contentinfo {
+        width: auto;
+        margin: 1em;
+        padding-top: 2em;
+    }
+    #donors {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 1em;
+    }
+    #donors br {
+        display: none;
+    }
+    #donors img {
+        max-width: 120px;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    #extras > .blogroll li {
+        flex: 1 1 45%;
+    }
+    #extras > .social ul {
+        display: block;
+        columns: 2;
+    }
+    #extras > .social li {
+        flex: none;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #extras > .blogroll li {
+        flex: 1 1 100%;
+    }
+    #extras > .social ul {
+        columns: 1;
+    }
 }
