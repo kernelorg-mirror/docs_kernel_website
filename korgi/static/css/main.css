@@ -339,3 +339,25 @@ dt {
 #logo-akamai {
     padding-bottom: 22px;
 }
+
+@media screen and (max-width: 848px) {
+    #banner {
+        width: auto;
+        margin: 0;
+        border-radius: 0;
+        border-left: none;
+        border-right: none;
+        border-top: none;
+    }
+    #banner h1 {
+        font-size: 2em;
+        margin: 0.5em 0;
+    }
+    #tux-gear {
+        width: 4em;
+        height: 5em;
+    }
+    #banner li {
+        padding: 0 0.5em;
+    }
+}
