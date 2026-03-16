@@ -360,6 +360,33 @@ dt {
     #banner li {
         padding: 0 0.5em;
     }
+    #protocols {
+        margin: 1em 0;
+        width: auto;
+    }
+    #latest {
+        margin-right: 0;    
+    }
+    #releases {
+        display: block;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    #releases td:nth-child(3) {
+        white-space: nowrap;
+        padding: 0 0.75em;
+    }
+    #featured,
+    #content {
+        width: auto;
+        margin: 1em;
+        padding: 1em;
+    }
+    pre,
+    .literal-block {
+        white-space: pre;
+        overflow-x: auto;
+    }
 
     #extras {
         width: auto;
