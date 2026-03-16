@@ -68,7 +68,7 @@ body {
     float: right;
 }
 #banner h1 {
-    margin: 28px 0 47px .05em;
+    margin: 12px 0 31px .05em;
     text-shadow: 3px 3px 0 #F8F4EE;
     font-size: 3em;
 }
@@ -78,7 +78,7 @@ body {
 }
 #banner ul {
     padding: 0;
-    margin: 0;
+    margin: 0 100px 0 0;
     font-size: 1.1em;
     font-weight: bold;
     list-style: none;
@@ -99,6 +99,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
     font-family: oswald,helvetica,sans-serif;
+    line-height: 1.1;
 }
 
 a {
