@@ -46,23 +46,16 @@ Reports received: 3
 
 Code of Conduct scope and enforcement related reports: 3
  
-   -- Education and coaching on the role and scope of the Code of Conduct.
-
-   -- Report about insensitive comments about projects and code that
-      don't fall under the scope of the Code of Conduct.
-
-   -- Report about insensitive comments made in a setting outside the
-      scope and purview of the Code of Conduct.
+  - Education and coaching on the role and scope of the Code of Conduct.
+  - Report about insensitive comments about projects and code that don't
+    fall under the scope of the Code of Conduct.
+  - Report about insensitive comments made in a setting outside the
+    scope and purview of the Code of Conduct.
 
 We would like to thank the Linux kernel community members who have
 supported the adoption of the Code of Conduct and who continue to
 uphold the professional standards of our community. If you have
 questions about this report, please write to <conduct@kernel.org>.
-
-Please visit the following Code of Conduct link below for information
-about the Code of Conduct Committee and previous reports:
-
-- https://www.kernel.org/code-of-conduct.html
 
 September 2025
 ~~~~~~~~~~~~~~
@@ -75,16 +68,15 @@ Conduct Committee received the following reports:
 Reports received: 3
 
 Code of Conduct scope and enforcement related reports: 2
- - Education and coaching on the role and scope of the Code of Conduct.
 
-   -- Report about insensitive comments about projects and code that
-      don't fall under the scope of the Code of Conduct.
-
-   -- Report with questions about DCO which doesn't fall under the scope
-      of the Code of Conduct.
+  - Education and coaching on the role and scope of the Code of Conduct.
+  - Report about insensitive comments about projects and code that don't
+    fall under the scope of the Code of Conduct.
+  - Report with questions about DCO which doesn't fall under the scope
+    of the Code of Conduct.
 
 Actions:
- - Ban on a developer was lifted after it expired.
+  - Ban on a developer was lifted after it expired.
 
 Unacceptable behavior or comments in email: 1
 
