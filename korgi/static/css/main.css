@@ -68,7 +68,7 @@ body {
     float: right;
 }
 #banner h1 {
-    margin: 12px 0 31px .05em;
+    margin: 28px 0 47px .05em;
     text-shadow: 3px 3px 0 #F8F4EE;
     font-size: 3em;
 }
@@ -78,7 +78,7 @@ body {
 }
 #banner ul {
     padding: 0;
-    margin: 0 100px 0 0;
+    margin: 0;
     font-size: 1.1em;
     font-weight: bold;
     list-style: none;
@@ -99,7 +99,6 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
     font-family: oswald,helvetica,sans-serif;
-    line-height: 1.1;
 }
 
 a {
@@ -357,15 +356,21 @@ dt {
         width: 4em;
         height: 5em;
     }
+    #banner ul {
+        margin: 0 4em 0 0;
+    }
     #banner li {
         padding: 0 0.5em;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        line-height: 1.1;
     }
     #protocols {
         margin: 1em 0;
         width: auto;
     }
     #latest {
-        margin-right: 0;    
+        margin-right: 0;
     }
     #releases {
         display: block;
@@ -387,13 +392,13 @@ dt {
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
         width: 100%;
+        border-collapse: collapse;
     }
     table.docutils th,
     table.docutils td {
         white-space: nowrap;
         padding: 0 5px;
         border: 1px solid #ccc;
-        border-collapse: collapse;
     }
     table.docutils > caption {
         padding-left: 5px;
@@ -462,7 +467,7 @@ dt {
         display: none;
     }
     #donors img {
-        max-width: 120px;
+        max-width: 100%;
         height: auto;
     }
 }
