@@ -43,11 +43,15 @@ following line to your commit message:
 AI agents (LLMs, coding assistants, etc.) are **not** permitted to use
 `Signed-off-by:` or `Co-developed-by:` trailers, as they cannot certify
 the DCO. When a contribution is made with AI assistance, the AI tool
-must be credited with an `Assisted-by:` trailer that includes the full
-model version identifier. For example:
+must be credited with an `Assisted-by: LLM [...]` trailer that
+summarizes how the tool was involved. Do not include the model name,
+version, or provider. For example:
 
     Signed-off-by: Your Name <your.email@example.com>
-    Assisted-by: claude-opus-4-6-20250925
+    Assisted-by: LLM [plan, review]
+
+The bracketed summary lists the areas the tool helped with, such as
+`[plan, review]`, `[codegen, tests]`, or `[tests]`.
 
 The human contributor remains responsible for reviewing all AI-generated
 changes, ensuring correctness, and certifying the DCO via their own
