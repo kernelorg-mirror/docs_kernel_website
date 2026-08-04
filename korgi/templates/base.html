@@ -46,6 +46,36 @@
                 {% endfor %}
                 </ul></nav>
         </header><!-- /#banner -->
+        <header id="mobile-banner" class="body">
+                <div id="mobile-tux-gear"></div>
+                <h1 class="mobile-site-title"><a href="{{ SITEURL }}/">{{ SITENAME }}</a></h1>
+                <input type="checkbox" id="mobile-nav-toggle" class="mobile-nav-checkbox" aria-label="Navigation menu" />
+                <label for="mobile-nav-toggle" class="hamburger-btn" aria-hidden="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2C1D00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+                </label>
+
+                <label for="mobile-nav-toggle" class="nav-overlay" aria-hidden="true"></label>
+
+                <nav id="mobile-drawer" role="navigation" aria-label="Mobile navigation">
+                <label for="mobile-nav-toggle" class="close-btn" aria-hidden="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2C1D00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                </label>
+                <ul>
+                {% for title, link in MENUITEMS %}
+                    <li><a href="{{ link }}">{{ title }}</a></li>
+                {% endfor %}
+                {% if DISPLAY_PAGES_ON_MENU %}
+                {% for page in PAGES %}
+                    <li><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></li>
+                {% endfor %}
+                {% endif %}
+                {% for cat, null in categories %}
+                    <li><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
+                {% endfor %}
+                </ul>
+                <a href="{{ SITEURL }}/"><div id="drawer-tux"></div></a>
+                </nav><!-- /#mobile-drawer -->
+        </header><!-- /#mobile-banner -->
         {% block content %}
         {% endblock %}
         <section id="extras" class="body">
