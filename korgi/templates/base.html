@@ -84,7 +84,8 @@
                         <h2>Other resources</h2>
                         <ul>
                         {% for name, link in LINKS %}
-                            <li><a href="{{ link }}">{{ name }}</a></li>
+                            {# Relative links are our own pages, so they get SITEURL like every other internal link #}
+                            <li><a href="{% if '://' not in link %}{{ SITEURL }}/{% endif %}{{ link }}">{{ name }}</a></li>
                         {% endfor %}
                         </ul>
                 </div><!-- /.blogroll -->
