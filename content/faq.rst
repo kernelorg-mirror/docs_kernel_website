@@ -118,10 +118,10 @@ If you are running a kernel that came with your Linux distribution, then
 the right place to start is by reporting the problem through your
 distribution support channels. Here are a few popular choices:
 
-- `Ubuntu <https://help.ubuntu.com/stable/ubuntu-help/report-ubuntu-bug.html.en>`_
+- `Ubuntu <https://ubuntu.com/project/docs/contributors/qa-and-testing/report-a-bug/>`_
 - `Fedora Project <https://docs.fedoraproject.org/en-US/quick-docs/howto-file-a-bug/>`_
-- `Arch Linux <https://bugs.archlinux.org/>`_
-- `Linux Mint <https://projects.linuxmint.com/reporting-an-issue.html>`_
+- `Arch Linux <https://wiki.archlinux.org/title/Bug_reporting_guidelines>`_
+- `Linux Mint <https://linuxmint-troubleshooting-guide.readthedocs.io/en/latest/>`_
 - `Debian GNU/Linux <https://www.debian.org/Bugs/Reporting>`_
 - `Red Hat <https://bugzilla.redhat.com/>`_
 - `OpenSUSE <https://bugzilla.opensuse.org/>`_
